@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bulma@0.9.1/css/bulma.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+      integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p"
+      crossorigin="anonymous"
+    />
+    <script src="script.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.0/ScrollTrigger.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.0/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg==" crossorigin="anonymous"></script>
+  </head>
+  <body>
+    <!-- Hello Section -->
+    <section id="hello-section" class="section is-large">
+      <label class="switch">
+        <input type="checkbox" class="theming">
+        <span class="slider round"></span>
+      </label>
+      <h1 class="title has-text-centered is-family-code">
+        Vanakkam!🙏🏾 I'm <span id="word"></span>
+      </h1>
+      <a href="#about-section" id="downBtnLink"><i class="fas fa-chevron-down bounce" id="downBtn"></i></a>
+      
+    </section>
+
+    <!-- About Section -->
+    <div id="main-content" style="padding-right: 10em;">
+    <section id="about-section" class="section">
+      <div class="columns">
+        <div class="column">
+          <h1 class="titles subtitle is-uppercase has-text-weight-semibold">
+            Background
+          </h1>
+        </div>
+        <div class="column is-three-quarters">
+          <h1 class="subtitle">
+            I'm a software engineer mostly experienced in front end development 
+            (currently based in Bengaluru) with over 1.5+ years' experience and 
+            a Computer Science and Engineering graduate. 
+            I always wanted to bring out my creative side but also make use of my tech degree. 
+            So, I felt that front end/web development is one field where I can achieve that.
+            Currently, I'm looking for freelance projects. While I'm not creating websites, I usually go
+            down the YouTube rabbit hole or discover new music/artists to listen.
+          </h1>
+        </div>
+        <!-- <div class="column is-3"> -->
+        <!-- </div> -->
+      </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills-section" class="section"> <div class="columns">
+      <div class="column">
+        <h1 class="titles subtitle is-uppercase has-text-weight-semibold">
+          Skills
+        </h1>
+      </div>
+      <div class="column is-three-quarters">
+        <div class="columns">
+        <div class="column">
+          <span class="is-uppercase has-text-weight-medium" style="color: var(--text-color);">Languages</span>
+     <ul>
+       <li>JavaScript (ES6)</li>
+       <li>HTML</li>
+       <li>CSS/SCSS</li>
+       <li>SQL</li>
+       <li>Python</li>
+     </ul>
+    </div>
+     <div class="column"><span class="is-uppercase has-text-weight-medium" style="color: var(--text-color);">Frameworks</span>
+     <ul>
+      <li>React.js</li>
+      <li>Node</li>
+      <li>AngularJS</li>
+      <li>Express.js</li>
+    </ul>
+  </div>
+    <div class="column"><span class="is-uppercase has-text-weight-medium" style="color: var(--text-color);">Tools</span>
+    <ul>
+      <li>Git & Github</li>
+      <li>Gulp </li>
+      <li>Grunt</li>
+      <li>Chrome DevTools</li>
+    </ul>
+  </div>
+  </div>
+      </div>
+    </div></section>
+
+    <!-- Work Section -->
+    <section id="work-section" class="section">
+      <div class="columns">
+        <div class="column">
+          <h1 class="titles subtitle is-uppercase has-text-weight-semibold">
+            Experience
+          </h1>
+        </div>
+        <div class="column is-three-quarters">
+          <div>
+            <h1 class="has-text-weight-medium">GAVS Technologies Private Limited <span class="is-italic" style="float: right;">(Jun 2018 – Mar 2020)</span></h1>
+            <p>
+            Engineer
+            </p>
+            <!-- <p class="has-text-justified">
+              Worked on multiple projects on front-end tech stack as well as
+              back-end tech stack but predominantly focused on front-end.
+            </p> -->
+          </div>
+          <br />
+          <div>
+            <h1 class="has-text-weight-medium">GAVS Technologies Private Limited<span class="is-italic" style="float: right;">(Feb 2018 – Apr 2018)</span></h1>
+            <p>
+              Project Intern
+              
+            </p>
+            
+            <!-- <p class="has-text-justified">
+              Lead the primary and secondary research on the challenges in the
+              pharmaceutical supply chain, how emerging technologies can be used
+              to overcome them and developed the workflow, smart contracts and a
+              working blockchain prototype for addressing the counterfeit
+              problem in the pharmaceutical supply chain.
+            </p> -->
+          </div>
+          <br />
+          <div>
+            <h1 class="has-text-weight-medium">Nokia Solutions & Networks India<span class="is-italic" style="float: right;">(Jun 2017 – Jun 2017)</span></h1>
+            <p>
+            Intern
+            </p>
+            <!-- <p class="has-text-justified">
+              Worked with developers and improved an internal web application
+              named PDM (Product Data Management) Change Management, used in the
+              shop floor to automate the existing manual process.
+            </p> -->
+          </div>
+          <br />
+          <br />
+          <br/>
+          <div>
+            <h1 class="has-text-weight-medium">
+              View my complete resume
+              <a
+                href="https://drive.google.com/file/d/18VVTm1sNDPW1f1YASxpZaWKG96YYQRvb/view"
+                target="_blank"
+                style="color: var(--theme);"
+                >here</a
+              >.
+            </h1>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Project Section -->
+    <section id="project-section" class="section">
+      <div class="columns">
+        <div class="column">
+          <h1 class="titles subtitle is-uppercase has-text-weight-semibold">
+            Projects
+          </h1>
+        </div>
+        <div class="column is-three-quarters">
+          <div class="tile is-ancestor">
+            <div class="tile is-parent">
+              <div class="card">
+                <div class="card-image">
+                  <figure class="image">
+                   <a href="https://travel-location.herokuapp.com/" target="_blank"><img src="/img/travel-location.png" alt="travel-location"></a> 
+                  </figure>
+                </div>
+                <div class="card-content">
+                  <div class="media">
+                    <div class="media-content">
+                      <p class="title is-4">Travel Location</p>
+                    </div>
+                  </div>
+              
+                  <div class="content">
+                    This application brings you random locations around the world along with some additional information like tourist attractions around the selected place and the corresponding Wikipedia pages of them.
+                    <br><br>
+                    <a href="https://github.com/sounsrk/travel-location" target="_blank" style="color: var(--theme);">
+                      <i class="fab fa-github fa-lg"></i></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="tile is-parent">
+              <!-- <div class="card">
+                <div class="card-image">
+                </div>
+                <div class="card-content">
+                  <div class="media">
+                    <div class="media-content">
+                      <p class="title is-4">John Smith</p>
+                    </div>
+                  </div>
+              
+                  <div class="content">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                    Phasellus nec iaculis mauris.
+                  </div>
+                </div>
+              </div> -->
+            </div>
+            </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->    
+    <section id="contact-section" class="section">
+      <div class="columns">
+        <div class="column">
+          <h1 class="titles subtitle is-uppercase has-text-weight-semibold">
+            Contact
+          </h1>
+        </div>
+        <div class="column container box is-three-quarters">
+          <form  action="https://formspree.io/f/maylkyvv" method="POST" autocomplete="off">
+          <div class="field">
+            <label class="label">Name</label>
+            <div class="control has-icons-left">
+              <input class="input" type="text" placeholder="Name" name="name" required/>
+              <span class="icon is-small is-left">
+                <i class="fas fa-user"></i>
+              </span>
+            </div>
+          </div>
+
+          <div class="field">
+            <label class="label">Email</label>
+            <div class="control has-icons-left">
+              <input class="input" type="email" placeholder="Email" name="_replyto" required/>
+              <span class="icon is-small is-left">
+                <i class="fas fa-envelope"></i>
+              </span>
+            </div>
+          </div>
+
+          <div class="field">
+            <label class="label">Message</label>
+            <div class="control">
+              <textarea
+                class="textarea"
+                placeholder="Write your message here..."
+                name="message"
+                required
+              ></textarea>
+            </div>
+          </div>
+
+          <div class="field is-grouped">
+            <div class="control">
+              <button class="button is-link" type="submit" style="background-color: var(--theme); color: var(--hello-text)">Submit</button>
+            </div>
+            <div class="control">
+              <button class="button is-link" type="reset" style="background-color: #f5f5f5; color:var(--theme);">Reset</button>
+            </div>
+          </div>
+          <input type="hidden" name="_next" value="/index.html" />
+        </form>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+
+    <button
+      class="button"
+      onclick="topFunction()"
+      id="myBtn"
+      title="Go to top"
+    >
+      Go to top
+    </button>
+
+    <!-- Footer Section -->
+    <footer class="footer">
+      <div class="content has-text-centered has-text-weight-medium">
+        <p>Made by Soundarya. 2020</p>
+        <a href="https://www.linkedin.com/in/soundarya-k/" target="_blank" style="color: var(--theme);">
+          <i class="fab fa-linkedin-in fa-lg"></i></a
+        >&nbsp;
+        <a href="https://github.com/sounsrk" target="_blank" style="color: var(--theme);">
+          <i class="fab fa-github fa-lg"></i></a
+        >&nbsp;
+        <a href="mailto:soundikub@gmail.com" target="_blank" style="color:var(--theme);">
+          <i class="far fa-envelope fa-lg"></i></a
+        >&nbsp;
+        <a href="https://www.instagram.com/sounsrk/" target="_blank" style="color: var(--theme);">
+          <i class="fab fa-instagram fa-lg"></i
+        ></a>
+      </div>
+    </footer>
+  </body>
+</html>
