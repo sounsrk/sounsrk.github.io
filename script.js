@@ -54,8 +54,14 @@ document.addEventListener("DOMContentLoaded", () => {
       document.body.scrollTop > 620 ||
       document.documentElement.scrollTop > 620
     ) {
+      drift.on("ready", (api) => {
+        api.widget.show();
+      });
       mybutton.style.display = "block";
     } else {
+      drift.on("ready", (api) => {
+        api.widget.hide();
+      });
       mybutton.style.display = "none";
     }
 
@@ -74,37 +80,76 @@ document.addEventListener("DOMContentLoaded", () => {
     scrollFunction();
   };
 
-  // "use strict";
-  // //Start of Async Drift Code
-  // !function() {
-  //   var t = window.driftt = window.drift = window.driftt || [];
-  //   if (!t.init) {
-  //     if (t.invoked) return void (window.console && console.error && console.error("Drift snippet included twice."));
-  //     t.invoked = !0, t.methods = [ "identify", "config", "track", "reset", "debug", "show", "ping", "page", "hide", "off", "on" ],
-  //     t.factory = function(e) {
-  //       return function() {
-  //         var n = Array.prototype.slice.call(arguments);
-  //         return n.unshift(e), t.push(n), t;
-  //       };
-  //     }, t.methods.forEach(function(e) {
-  //       t[e] = t.factory(e);
-  //     }), t.load = function(t) {
-  //       var e = 3e5, n = Math.ceil(new Date() / e) * e, o = document.createElement("script");
-  //       o.type = "text/javascript", o.async = !0, o.crossorigin = "anonymous", o.src = "https://js.driftt.com/include/" + n + "/" + t + ".js";
-  //       var i = document.getElementsByTagName("script")[0];
-  //       i.parentNode.insertBefore(o, i);
-  //     };
-  //   }
-  // }();
-  // drift.SNIPPET_VERSION = '0.3.1';
-  // drift.load('pxxbzibkn675');
-  // //End of Async Drift Cod
+  // <!-- Start of Async Drift Code -->
+
+  ("use strict");
+
+  !(function () {
+    var t = (window.driftt = window.drift = window.driftt || []);
+    if (!t.init) {
+      if (t.invoked)
+        return void (
+          window.console &&
+          console.error &&
+          console.error("Drift snippet included twice.")
+        );
+      (t.invoked = !0),
+        (t.methods = [
+          "identify",
+          "config",
+          "track",
+          "reset",
+          "debug",
+          "show",
+          "ping",
+          "page",
+          "hide",
+          "off",
+          "on",
+        ]),
+        (t.factory = function (e) {
+          return function () {
+            var n = Array.prototype.slice.call(arguments);
+            return n.unshift(e), t.push(n), t;
+          };
+        }),
+        t.methods.forEach(function (e) {
+          t[e] = t.factory(e);
+        }),
+        (t.load = function (t) {
+          var e = 3e5,
+            n = Math.ceil(new Date() / e) * e,
+            o = document.createElement("script");
+          (o.type = "text/javascript"),
+            (o.async = !0),
+            (o.crossorigin = "anonymous"),
+            (o.src = "https://js.driftt.com/include/" + n + "/" + t + ".js");
+          var i = document.getElementsByTagName("script")[0];
+          i.parentNode.insertBefore(o, i);
+        });
+    }
+  })();
+  drift.SNIPPET_VERSION = "0.3.1";
+  drift.load("pxxbzibkn675");
+  drift.on("ready", (api) => {
+    api.widget.hide();
+    if (document.body.classList.contains("dark-theme")) {
+      drift.config({
+        backgroundColor: "#008f95",
+        foregroundColor: "#000000",
+      });
+    } else {
+      drift.config({
+        backgroundColor: "#e24e42",
+        foregroundColor: "#ffffff",
+      });
+    }
+    console.log(document.body.classList.contains("dark-theme"));
+  });
+  // <!-- End of Async Drift Code -->
 
   $("#downBtnLink").on("click", function (e) {
-    // prevent default anchor click behavior
     e.preventDefault();
-
-    // store hash
     var hash = this.hash;
 
     if ($(hash).length) {
@@ -128,7 +173,6 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   btn.addEventListener("click", function () {
-    console.log("clicked");
     if (prefersDarkScheme.matches) {
       document.body.classList.toggle("light-theme");
       var theme = document.body.classList.contains("light-theme")
@@ -139,6 +183,17 @@ document.addEventListener("DOMContentLoaded", () => {
       var theme = document.body.classList.contains("dark-theme")
         ? "dark"
         : "light";
+    }
+    if (theme == "dark") {
+      drift.config({
+        backgroundColor: "#008f95",
+        foregroundColor: "#000000",
+      });
+    } else if (theme == "light") {
+      drift.config({
+        backgroundColor: "#e24e42",
+        foregroundColor: "#ffffff",
+      });
     }
     localStorage.setItem("theme", theme);
   });
